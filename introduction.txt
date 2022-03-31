@@ -1,0 +1,132 @@
+Open a file in vim with vi file.txt
+
+For permanent setup, add these lines to ~/.vimrc:
+
+
+Starting mode is NORMAL mode and is by default
+
+
+1) i		- INSERT Mode to start writing something
+2) :w    	- Write Changes to file
+3) ESC 		- To get back to NORMAL mode to use other commands
+4) :q	 	- Quit or close file, if changes are not saved gives warngin
+5) :q!	 	- close file and even override the unsaved changes
+6) Navigate 	- Use Arrow Keys
+7) Use h-left, l-right, j-down, k-up for navigation
+---------------------------------------------------------------------------------------------------------
+
+8) I 		- Insert at the beginning of the line
+9) A 		- Append at last of the line
+10)o		- Adds a new Line Below
+11)O		- Adds a new Line Above
+12)w		- Jump to next word separated by english alphabets
+13)b 		- JUmp to previou word separated by english alphabets
+14)W		- Jump to next word separated by space 
+15)B		- Jump to prev word separated by space
+16)r		- replace letter pointed by cursor
+18)R 		- replace acorss various places at a time
+19)cw      	- change word from cursor position
+20)8w 		- Jump above eight words from current word
+21)c7w		- Change 7 words including the cursor word
+22)4j,8k	- 4 lines up,8 lines down 
+23)C		- Delete Rest of line (and goes to INSERT mode)
+24)D 		- Delete Rest of line (wont go to INSERT mode)
+25)d4w		- delete 4 words including the cursor present word  
+26)cc		- change the entire line
+27)dd 		- delete the entire line
+28)2cc    	- change two lines from current cursor line
+29)4dd 	 	- delete four lines from current cursror line
+---------------------------------------------------------------------------------------------------------
+30)u		- Undo operation
+31)CTRL+R	- Redo operation
+32)5u		- Undo Last Five Changes
+33)7+CTRL+R 	- Redo Last Seven Changes
+---------------------------------------------------------------------------------------------------------
+34)ciw 		- change inner word (if cursor is in middle of word and change the word by usign cw command by moving cursor to front)
+35)diw		- delete inner word
+36)ci)		- change inner paranthesis (useful in for or while loops)
+37)ci(		- change inner paranthesis (can be used instead of above command)
+38)ci[		- change in brackets (Used for lists in python)
+39)ci]		- same as above
+40)ci{		- change inner curly brackets
+41)ci}		- same as above
+--------------------------------------------------------------------------------------------------------
+42)%		- Jump cursor to corresponding bracket
+43)c%		- change from starting bracket to matching ending bracket
+44)gg 		- Jump to begining of file
+45)G		- Jump to end of file
+46)17G		- Go to mentioned 17thline in file
+47):17		- Go to mentioned line
+48)$		- End of line without INSERT mode
+49)0		- Beginning of line without INSERT mode
+50)d$		- delete till end of line from cursor
+--------------------------------------------------------------------------------------------------------
+
+v 		- VISUAL Mode to select lines from cursor and can do following operations
+
+d 		- delete selected stuff from cursor
+c		- change selected stuff from cursor
+y		- yanking (copy) the stuff selected
+--------------------------------------------------------------------------------------------------------
+p		- paste after the cursor
+P		- paste before the cursor
+--------------------------------------------------------------------------------------------------------
+yy		- yank line
+5yy		- yank five line
+9p		- paste nine times
+y5w		- yank five words
+yi) 		- yank inner brackets
+yiw 		- yank inner word
+--------------------------------------------------------------------------------------------------------
+SHIFT+v		- VISUAL LINE Mode (For multiline selection using cursor)
+CTRL+v		- VISUAL BLOCK Mode (For multiline selection using multicursor)
+.		- Repeat last operation
+zz		- center selected line in the screen without scrolling the mouse
+--------------------------------------------------------------------------------------------------------
+>		- Shift Right
+<		- Shift Left
+=		- Indent (Works better in Python and C++ codes)
+
+>>		- Shift Line Right
+<< 		- Shift Line Left
+==		- Indent Line
+
+gg=G		- Indent from starting of file to ending of file
+ggdG		- Delete Whole File
+ggcG		- Change Whole File
+--------------------------------------------------------------------------------------------------------
+
+Some Useful Commands in NORMAL MODE
+
+/text		- search for text in file
+n 		- Move to Next occurence
+N		- Move to Prev occurence
+#		- Previous Token Occurence
++		- Next Token Occurence
+--------------------------------------------------------------------------------------------------------
+:s/old/new/g	- Search and Replace old word with new word in that line
+:%s/old/newg	- Search and Replace all old words to new words in file
+--------------------------------------------------------------------------------------------------------
+:colorscheme blue 		- sets color to screen
+:set tabstop=4 shiftwidth=4 	- for setting tabspace to 4
+
+SHIFT+RIGHTCLICK 		- to paste text copied and stored in clipboard
+
+:set autoindent	- sets autoindentation in many files
+:set mouse=a	- Activate mouse
+:set mouse=""	- Deactivate mouse
+:set number 	- Line Numbers are shown
+:set nonumber 	- This setting is offed
+:set relativenumber 		- Relative Numbers are shown (Distance from current cursor are shown)
+				  and cursor is at 0
+:set norelativenumber 		- This setting is offed
+" turn hybrid line numbers on
+:set number relativenumber 	- both cursor absolute and relative nos are shown
+:set nu rnu
+
+" turn hybrid line numbers off
+:set nonumber norelativenumber
+:set nonu nornu
+--------------------------------------------------------------------------------------------------------
+End of Commands
+
