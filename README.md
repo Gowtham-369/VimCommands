@@ -1,2 +1,2 @@
 # VimCommands
-Vim Commands Crash Course 
+Contains all commands for a beginner
